@@ -7,3 +7,5 @@ D:\7thSem\Advance Software engineering\BugTracker\BugTracker\bin\Debug\BugTracke
 D:\7thSem\Advance Software engineering\BugTracker\BugTracker\obj\Debug\BugTracker.exe
 D:\7thSem\Advance Software engineering\BugTracker\BugTracker\obj\Debug\BugTracker.pdb
 D:\7thSem\Advance Software engineering\BugTracker\BugTracker\obj\Debug\BugTracker.Adminlogin.resources
+D:\7thSem\Advance Software engineering\BugTracker\BugTracker\obj\Debug\BugTracker.UserRegistration.resources
+D:\7thSem\Advance Software engineering\BugTracker\BugTracker\obj\Debug\BugTracker.Dashboard.resources
