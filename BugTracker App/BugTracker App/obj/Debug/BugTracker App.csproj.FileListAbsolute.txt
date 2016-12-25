@@ -1,0 +1,35 @@
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\bin\Debug\BugTrackingApplication.exe.config
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\bin\Debug\BugTrackingApplication.exe
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\bin\Debug\BugTrackingApplication.pdb
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\obj\Debug\BugTrackingApplication.TesterDashboard.resources
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\obj\Debug\BugTrackingApplication.Signin.resources
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\obj\Debug\BugTrackingApplication.DeveloperDashboard.resources
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\obj\Debug\BugTrackingApplication.Properties.Resources.resources
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\obj\Debug\BugTrackingApplication.SignUp.resources
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\obj\Debug\BugTracker App.csproj.GenerateResource.Cache
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\obj\Debug\BugTrackingApplication.exe
+D:\7thSem\Advance Software engineering\BugTrackingApplication\BugTrackingApplication\obj\Debug\BugTrackingApplication.pdb
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\bin\Debug\BugTrackingApplication.exe.config
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\obj\Debug\BugTrackingApplication.exe
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\obj\Debug\BugTrackingApplication.pdb
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\bin\Debug\BugTrackingApplication.exe
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\bin\Debug\BugTrackingApplication.pdb
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\obj\Debug\BugTracker App.csprojResolveAssemblyReference.cache
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\obj\Debug\BugTrackerApp.TesterDashboard.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\obj\Debug\BugTrackerApp.Signin.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\obj\Debug\BugTrackerApp.DeveloperDashboard.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\obj\Debug\BugTrackingApplication.Properties.Resources.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\obj\Debug\BugTrackerApp.SignUp.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTrackingApplication\obj\Debug\BugTracker App.csproj.GenerateResource.Cache
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\bin\Debug\BugTrackingApplication.exe.config
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTrackingApplication.exe
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTrackingApplication.pdb
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\bin\Debug\BugTrackingApplication.exe
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\bin\Debug\BugTrackingApplication.pdb
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTracker App.csprojResolveAssemblyReference.cache
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTrackerApp.TesterDashboard.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTrackerApp.Signin.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTrackerApp.DeveloperDashboard.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTrackingApplication.Properties.Resources.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTrackerApp.SignUp.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTracker App.csproj.GenerateResource.Cache
