@@ -96,6 +96,16 @@ namespace BugTrackerApp
            this.Close();
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void signup_Click(object sender, EventArgs e)
         {
             this.Hide();
