@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker App", "BugTracker App.csproj", "{A3ADE368-5827-4ACA-B552-12850AC60D31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTrackerApp", "BugTrackerApp.csproj", "{A3ADE368-5827-4ACA-B552-12850AC60D31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{EC4F8BFE-54FE-4C40-B69F-7AA640F3F181}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A3ADE368-5827-4ACA-B552-12850AC60D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3ADE368-5827-4ACA-B552-12850AC60D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3ADE368-5827-4ACA-B552-12850AC60D31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4F8BFE-54FE-4C40-B69F-7AA640F3F181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4F8BFE-54FE-4C40-B69F-7AA640F3F181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4F8BFE-54FE-4C40-B69F-7AA640F3F181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4F8BFE-54FE-4C40-B69F-7AA640F3F181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

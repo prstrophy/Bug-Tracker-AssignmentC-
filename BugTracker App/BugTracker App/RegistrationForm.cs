@@ -77,5 +77,10 @@ namespace BugTrackerApp
             Signin registration = new Signin();
             registration.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

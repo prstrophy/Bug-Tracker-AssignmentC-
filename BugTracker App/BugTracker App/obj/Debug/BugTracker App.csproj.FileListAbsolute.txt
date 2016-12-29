@@ -33,3 +33,6 @@ D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\B
 D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTrackingApplication.Properties.Resources.resources
 D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTracker App.csproj.GenerateResource.Cache
 D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTrackerApp.RegistrationForm.resources
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\bin\Debug\BugTracker App.exe.config
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTracker App.exe
+D:\7thSem\Advance Software engineering\BugTracker App\BugTracker App\obj\Debug\BugTracker App.pdb
