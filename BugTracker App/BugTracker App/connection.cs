@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace BugTrackerApp
 {
-    class DBConnection
+    class connection
     {
-        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Temp\database.mdf;Integrated Security = True; Connect Timeout = 30");
-
-
-
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Temp\database.mdf;Integrated Security=True;Connect Timeout=30");
+        
+        
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter reader = new SqlDataAdapter();
         DataTable dt = new DataTable();

@@ -11,14 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+   
 
         #region Windows Form Designer generated code
 
@@ -42,7 +35,10 @@
             this.DeveloperCommand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.srcFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.bugTried = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.bugHistory = new System.Windows.Forms.DataGridViewLinkColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -51,18 +47,26 @@
             this.save = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.errorReporting = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorFixedHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 8);
+            this.label1.Location = new System.Drawing.Point(257, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 24);
@@ -85,12 +89,15 @@
             this.DeveloperCommand,
             this.Column2,
             this.Column3,
-            this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 274);
+            this.srcFile,
+            this.Column1,
+            this.bugTried,
+            this.bugHistory});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 250);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(892, 176);
+            this.dataGridView1.Size = new System.Drawing.Size(777, 209);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -160,6 +167,12 @@
             this.Column3.HeaderText = "Bug Fixed Date";
             this.Column3.Name = "Column3";
             // 
+            // srcFile
+            // 
+            this.srcFile.DataPropertyName = "sourceFile";
+            this.srcFile.HeaderText = "Source FIle";
+            this.srcFile.Name = "srcFile";
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "";
@@ -167,10 +180,24 @@
             this.Column1.Text = "Update";
             this.Column1.UseColumnTextForLinkValue = true;
             // 
+            // bugTried
+            // 
+            this.bugTried.HeaderText = "";
+            this.bugTried.Name = "bugTried";
+            this.bugTried.Text = "Coudn\'tSolve";
+            this.bugTried.UseColumnTextForLinkValue = true;
+            // 
+            // bugHistory
+            // 
+            this.bugHistory.HeaderText = "";
+            this.bugHistory.Name = "bugHistory";
+            this.bugHistory.Text = "bugHistory";
+            this.bugHistory.UseColumnTextForLinkValue = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 112);
+            this.label2.Location = new System.Drawing.Point(252, 88);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
@@ -193,7 +220,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Fixed",
             "Unfixed"});
-            this.comboBox1.Location = new System.Drawing.Point(141, 109);
+            this.comboBox1.Location = new System.Drawing.Point(340, 83);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(82, 21);
@@ -202,10 +229,10 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(125, 137);
+            this.richTextBox1.Location = new System.Drawing.Point(143, 134);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(305, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(222, 96);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -213,7 +240,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 87);
+            this.label4.Location = new System.Drawing.Point(55, 92);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
@@ -222,7 +249,7 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(487, 194);
+            this.save.Location = new System.Drawing.Point(375, 207);
             this.save.Margin = new System.Windows.Forms.Padding(2);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(56, 25);
@@ -233,7 +260,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(599, 194);
+            this.button2.Location = new System.Drawing.Point(471, 207);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(63, 25);
@@ -244,40 +271,98 @@
             // 
             // errorReporting
             // 
-            this.errorReporting.Location = new System.Drawing.Point(487, 112);
+            this.errorReporting.Location = new System.Drawing.Point(400, 134);
             this.errorReporting.Margin = new System.Windows.Forms.Padding(2);
             this.errorReporting.Name = "errorReporting";
             this.errorReporting.Size = new System.Drawing.Size(106, 28);
             this.errorReporting.TabIndex = 9;
-            this.errorReporting.Text = "Report Error";
+            this.errorReporting.Text = "Report Bug";
             this.errorReporting.UseVisualStyleBackColor = true;
             this.errorReporting.Click += new System.EventHandler(this.errorReporting_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(777, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editProfileToolStripMenuItem,
+            this.errorFixedHistoryToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 22);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // editProfileToolStripMenuItem
+            // 
+            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.editProfileToolStripMenuItem.Text = "Edit Profile";
+            this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
+            // 
+            // errorFixedHistoryToolStripMenuItem
+            // 
+            this.errorFixedHistoryToolStripMenuItem.Name = "errorFixedHistoryToolStripMenuItem";
+            this.errorFixedHistoryToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.errorFixedHistoryToolStripMenuItem.Text = "Error fixed History";
+            this.errorFixedHistoryToolStripMenuItem.Click += new System.EventHandler(this.errorFixedHistoryToolStripMenuItem_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(633, 207);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(591, 92);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(702, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(78, 1);
+            this.panel1.Location = new System.Drawing.Point(58, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 63);
-            this.panel1.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.panel1.Size = new System.Drawing.Size(644, 75);
+            this.panel1.TabIndex = 14;
             // 
             // DeveloperDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 461);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(777, 470);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.errorReporting);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.save);
@@ -287,15 +372,20 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DeveloperDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.dashboardForDeveloper_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +403,10 @@
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button errorReporting;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem errorFixedHistoryToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBug;
         private System.Windows.Forms.DataGridViewTextBoxColumn TesterId;
         private System.Windows.Forms.DataGridViewTextBoxColumn LineNo;
@@ -324,8 +418,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DeveloperCommand;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn srcFile;
         private System.Windows.Forms.DataGridViewLinkColumn Column1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewLinkColumn bugTried;
+        private System.Windows.Forms.DataGridViewLinkColumn bugHistory;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

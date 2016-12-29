@@ -12,7 +12,7 @@ namespace BugTrackerApp
 {
     public partial class TesterDashboard : Form
     {
-        DBConnection conn = new DBConnection();
+        connection conn = new connection();
         gettersANDsetters getandset = new gettersANDsetters();
         int BUGID;
         public TesterDashboard()
@@ -25,12 +25,13 @@ namespace BugTrackerApp
             if (dataGridView1.CurrentCell.Value.ToString() == "Update")
             {
                 BUGID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["BugId"].Value);
-                string query = "select lineNum,method,class,description from bug where bugId = " + BUGID;
+                string query = "select lineNum,method,class,description,sourcefile from bug where bugId = " + BUGID;
                 DataTable dt = conn.retrieve(query);
                 linenumber.Text = dt.Rows[0][0].ToString();
                 methodname.Text = dt.Rows[0][1].ToString();
                 classname.Text = dt.Rows[0][2].ToString();
-                richTextBox1.Text = dt.Rows[0][2].ToString();
+                richTextBox1.Text = dt.Rows[0][3].ToString();
+                sourcefile.Text = dt.Rows[0][4].ToString();
                 Save.Text = "Update";
             }
         }
@@ -38,6 +39,8 @@ namespace BugTrackerApp
         private void dashboardForTester_Load(object sender, EventArgs e)
         {
             DisplayBug();
+            pictureBox1.Image = Image.FromFile(@"../../../images/"+ getandset.getFilename());
+            label7.Text = "Welcome,"+getandset.getUname();
         }
         public void DisplayBug()
         {
@@ -70,24 +73,42 @@ namespace BugTrackerApp
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (Save.Text == "Save")
+            if (linenumber.Text == "" || sourcefile.Text == "" || methodname.Text == "" || classname.Text == "" || richTextBox1.Text == "")
             {
-                string query;
-                string bugStatus = "Unfixed";
-                int LineNum = Convert.ToInt32(linenumber.Text);
-                query = "insert into bug (testerId, method, class, description, fixStatus, bugReportedDate, lineNum) values('" + getandset.getId() + "','" + methodname.Text + "','" + classname.Text + "','" + richTextBox1.Text + "','" + bugStatus + "','" + DateTime.Now + "', " + LineNum + " )";
-                conn.manipulate(query);
-                DisplayBug();
+                MessageBox.Show("None Of the field can be Empty!!");
             }
-            else if (Save.Text == "Update")
+            else
             {
-                string query;
-                int LineNum = Convert.ToInt32(linenumber.Text);
+                double num;
 
-                query = "UPDATE bug SET lineNum='" + LineNum + "',method='" + methodname.Text + "',class='" + classname.Text + "',description='" + richTextBox1.Text + "' WHERE bugId='" + BUGID + "' ";
-                conn.manipulate(query);
-                DisplayBug();
+                if (double.TryParse(linenumber.Text, out num))
+                {
+                    if (Save.Text == "Save")
+                    {
+                        string query;
+                        string bugStatus = "Unfixed";
+                        int LineNum = Convert.ToInt32(linenumber.Text);
+                        query = "insert into bug (testerId, method, class, description, fixStatus, bugReportedDate, lineNum,sourceFile) values('" + getandset.getId() + "','" + methodname.Text + "','" + classname.Text + "','" + richTextBox1.Text + "','" + bugStatus + "','" + DateTime.Now + "', " + LineNum + ",'" + sourcefile.Text + "' )";
+                        conn.manipulate(query);
+                        DisplayBug();
+                    }
+                    else if (Save.Text == "Update")
+                    {
+                        string query;
+                        int LineNum = Convert.ToInt32(linenumber.Text);
+
+                        query = "UPDATE bug SET lineNum='" + LineNum + "',method='" + methodname.Text + "',sourceFile='" + sourcefile.Text + "',class='" + classname.Text + "',description='" + richTextBox1.Text + "' WHERE bugId='" + BUGID + "' ";
+                        conn.manipulate(query);
+                        DisplayBug();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Line no must be numeric");
+                }
+
             }
+            
             
         }
 
@@ -100,6 +121,23 @@ namespace BugTrackerApp
         {
             DeveloperDashboard errorfixwindow = new DeveloperDashboard();
             errorfixwindow.Show();
+        }
+
+        private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Userdetails eud = new Userdetails();
+            eud.Show();
+        }
+
+        private void checkFixedBugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fixedHistoryDeveloper fhd = new fixedHistoryDeveloper();
+            fhd.Show();
+        }
+
+        private void sourcefile_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

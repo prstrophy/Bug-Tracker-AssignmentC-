@@ -9,9 +9,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BugTrackerApp</RootNamespace>
     <AssemblyName>BugTrackerApp</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,10 +31,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,15 +47,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="commonFunction.cs" />
-    <Compile Include="DBConnection.cs" />
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bugs.Designer.cs">
+      <DependentUpon>bugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bughistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bughistory.Designer.cs">
+      <DependentUpon>bughistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connection.cs" />
     <Compile Include="TesterDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TesterDashboard.Designer.cs">
       <DependentUpon>TesterDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Userdetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Userdetails.Designer.cs">
+      <DependentUpon>Userdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fixedBugHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fixedBugHistory.Designer.cs">
+      <DependentUpon>fixedBugHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fixedHistoryDeveloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fixedHistoryDeveloper.Designer.cs">
+      <DependentUpon>fixedHistoryDeveloper.cs</DependentUpon>
+    </Compile>
     <Compile Include="gettersANDsetters.cs" />
+    <Compile Include="SigninAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SigninAdmin.Designer.cs">
+      <DependentUpon>SigninAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="Signin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,14 +117,56 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistrationForm.cs">
+    <Compile Include="registrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrationForm.Designer.cs">
-      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    <Compile Include="registrationForm.Designer.cs">
+      <DependentUpon>registrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="testerHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testerHistory.Designer.cs">
+      <DependentUpon>testerHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="unfixedHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="unfixedHistory.Designer.cs">
+      <DependentUpon>unfixedHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userType.Designer.cs">
+      <DependentUpon>userType.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bugs.resx">
+      <DependentUpon>bugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bughistory.resx">
+      <DependentUpon>bughistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TesterDashboard.resx">
       <DependentUpon>TesterDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Userdetails.resx">
+      <DependentUpon>Userdetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fixedBugHistory.resx">
+      <DependentUpon>fixedBugHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fixedHistoryDeveloper.resx">
+      <DependentUpon>fixedHistoryDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SigninAdmin.resx">
+      <DependentUpon>SigninAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signin.resx">
       <DependentUpon>Signin.cs</DependentUpon>
@@ -96,8 +184,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegistrationForm.resx">
-      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    <EmbeddedResource Include="registrationForm.resx">
+      <DependentUpon>registrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testerHistory.resx">
+      <DependentUpon>testerHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="unfixedHistory.resx">
+      <DependentUpon>unfixedHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userType.resx">
+      <DependentUpon>userType.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -111,6 +208,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invalid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

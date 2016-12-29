@@ -7,16 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.IO;
 
 namespace BugTrackerApp
 {
-    public partial class RegistrationForm : Form
+    public partial class registrationForm : Form
     {
-        DBConnection conn = new DBConnection();
-        public RegistrationForm()
+        connection conn = new connection();
+        gettersANDsetters getandsets = new gettersANDsetters();
+        private string sourcePath;
+        private string destinationPath;
+        public registrationForm()
         {
+            destinationPath = @"../../../images/";
             InitializeComponent();
         }
+       
 
         private void fname_TextChanged(object sender, EventArgs e)
         {
@@ -25,7 +32,7 @@ namespace BugTrackerApp
 
         private void lname_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void uname_TextChanged(object sender, EventArgs e)
@@ -45,14 +52,69 @@ namespace BugTrackerApp
 
         private void signUp_Click(object sender, EventArgs e)
         {
-            string query;
-            int comId = Convert.ToInt16(comboBox1.SelectedValue);
-            query = "insert into users(fname,lname,username,password,usertypeid) values('" + fname.Text + "','" + lname.Text + "','" + uname.Text + "','" + pwd.Text + "'," + comId + ")";
-            conn.manipulate(query);
-            MessageBox.Show("Registration Sucessfull Please log in to continue!!");
-            this.Close();
-            Signin sn = new Signin();
-            sn.Show();
+            if (!string.IsNullOrWhiteSpace(sourcePath) && File.Exists(sourcePath))
+            {
+                
+                destinationPath += Path.GetFileName(sourcePath);
+                if (File.Exists(destinationPath))
+                    File.Delete(destinationPath);
+
+                File.Copy(sourcePath, destinationPath);
+            }
+            
+            if(fname.Text=="" || lname.Text=="" || uname.Text=="" || pwd.Text=="" ){
+                MessageBox.Show("None Of the field can be Empty!!");
+            }
+            else{
+                            String queri = "SELECT username FROM users WHERE username = '" + uname.Text + "'";
+
+                            DataTable dt = conn.retrieve(queri);
+                           
+
+                             if (dt.Rows.Count > 0)
+                        {
+                            int compare = dt.Rows.Count;
+                            string myString = compare.ToString();
+                            Regex regex = new Regex("^[1-9]*$");
+                            if (regex.IsMatch(myString))
+                            {
+
+                                pictureBox1.Image = Properties.Resources.invalid;
+
+                                regexlbl.Text = "Username Already Exists!!.Try Another!!";
+                            }
+                            else
+                            {
+
+                                pictureBox1.Image = Properties.Resources.valid;
+
+                                regexlbl.Text = "Valid";
+                            }
+                        }
+                        else
+                             {
+                                 if (!string.IsNullOrWhiteSpace(sourcePath) && File.Exists(sourcePath))
+                                 {
+
+                                     
+                                     if (File.Exists(destinationPath))
+                                         File.Delete(destinationPath);
+
+                                     File.Copy(sourcePath, destinationPath);
+                                 }
+                            string query;
+                            int comId = Convert.ToInt16(comboBox1.SelectedValue);
+                            query = "insert into users(fname,lname,username,password,usertypeid,image) values('" + fname.Text + "','" + lname.Text + "','" + uname.Text + "','" + pwd.Text + "'," + comId + ",'" + getandsets.getFilename() + "')";
+                            conn.manipulate(query);
+                            MessageBox.Show("Registration Sucessfull Please log in to continue!!");
+                            this.Close();
+                            SignIn sn = new SignIn();
+                            sn.Show();
+                        }
+            }
+           
+            
+            
 
             
         }
@@ -71,16 +133,31 @@ namespace BugTrackerApp
             comboBoxSetting();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Signin registration = new Signin();
-            registration.Show();
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Open Image";
+                dlg.Filter = "png files (*.png)|*.png|(*.jpg)|*.jpg";
+                
+                
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    sourcePath = dlg.FileName;
+                    var fileName = Path.GetFileName(dlg.FileName);
+                    getandsets.setFilename(fileName);
+                    
+                    
+                }
+            }
         }
+       
+        
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

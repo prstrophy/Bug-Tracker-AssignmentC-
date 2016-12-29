@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace BugTrackerApp
 {
-    public partial class Signin : Form
+    public partial class SignIn : Form
     {
 
-        DBConnection conn = new DBConnection();
+        connection conn = new connection();
         gettersANDsetters getandset = new gettersANDsetters();
         int usertype,userid;
 
-         public Signin()
+         public SignIn()
         {
             InitializeComponent();
         }
@@ -39,7 +39,7 @@ namespace BugTrackerApp
 
         private void login_Click(object sender, EventArgs e)
         {
-            Signin sn = new Signin();
+            SignIn sn = new SignIn();
             
             String query = "SELECT * FROM users WHERE USERNAME = '" + uname.Text + "' AND PASSWORD = '" + pwd.Text + "'";
             
@@ -54,10 +54,13 @@ namespace BugTrackerApp
                     string id = row["id"].ToString();
                     string fname = row["fname"].ToString();
                     string usertypeId = row["usertypeid"].ToString();
+                    string image = row["image"].ToString();
                     userid = Convert.ToInt32(id);
                     usertype = Convert.ToInt32(usertypeId);
                     getandset.setusertypeID(usertype);
                     getandset.setId(userid);
+                    getandset.setUname(fname);
+                    getandset.setFilename(image);
 
 
                 }
@@ -66,10 +69,10 @@ namespace BugTrackerApp
 
                     this.Hide();
                     MessageBox.Show("Login Sucessfull");
-                    DeveloperDashboard ds = new DeveloperDashboard();
+                    DeveloperDashboard dsd = new DeveloperDashboard();
                     
-                    ds.Closed += (s, args) => this.Close();
-                    ds.Show();
+                    dsd.Closed += (s, args) => this.Close();
+                    dsd.Show();
                     
                 }
                 else
@@ -96,23 +99,37 @@ namespace BugTrackerApp
            this.Close();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void signup_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegistrationForm registration = new RegistrationForm();
+            registrationForm registration = new registrationForm();
             registration.Show();
    
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SigninAdmin superAdmin = new SigninAdmin();
+            superAdmin.Show();
+            superAdmin.Closed += (s, args) => this.Close();
+            superAdmin.Show();
         }
     }
 }
