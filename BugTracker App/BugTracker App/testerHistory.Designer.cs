@@ -59,10 +59,11 @@
             this.DeveloperCommand,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 174);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 113);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1141, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(761, 200);
             this.dataGridView1.TabIndex = 3;
             // 
             // idBug
@@ -134,20 +135,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 71);
+            this.label1.Location = new System.Drawing.Point(130, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 20);
+            this.label1.Size = new System.Drawing.Size(166, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Bug Reported by particular Tester";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // testerHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 507);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(785, 330);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "testerHistory";
             this.Text = "testerHistory";
             this.Load += new System.EventHandler(this.testerHistory_Load);

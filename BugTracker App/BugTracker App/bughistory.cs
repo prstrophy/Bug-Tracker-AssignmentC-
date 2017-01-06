@@ -29,6 +29,7 @@ namespace BugTrackerApp
             string query = "SELECT * FROM bugTried WHERE bugId='" + getandset.getbugId() + "' ";
             DataTable dt = conn.retrieve(query);
             dataGridView1.DataSource = dt;
+            label2.Text = bugId.ToString();
         }
 
     }

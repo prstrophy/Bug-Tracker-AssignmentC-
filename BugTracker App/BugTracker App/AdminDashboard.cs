@@ -17,6 +17,18 @@ namespace BugTrackerApp
             InitializeComponent();
         }
 
+        internal connection connection
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         private void search_Click(object sender, EventArgs e)
         {
             Search srch = new Search();
@@ -49,7 +61,7 @@ namespace BugTrackerApp
 
         private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Restart();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -59,9 +59,24 @@ namespace Testing
             DataTable actualResult = bcf.userChck(username);
             Assert.AreEqual(1, actualResult.Rows.Count);
         }
-
         [TestMethod]
         public void Registration()
+        {
+            string firstname = "Samir";
+            string lastname = "Pote";
+            string username = "midnythunt";
+            string password = "awesome";
+            string usertypeid = "1";
+
+            BugTrackerApp.commonFunction bcf = new BugTrackerApp.commonFunction();
+
+            var result = bcf.userreg(firstname, lastname, username, password, usertypeid);
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Registrationfail()
         {
             string firstname = "prashid";
             string lastname = "pradhan";

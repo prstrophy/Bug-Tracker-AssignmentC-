@@ -10,16 +10,28 @@ using System.Windows.Forms;
 
 namespace BugTrackerApp
 {
-    public partial class SignIn : Form
+    public partial class Signin : Form
     {
 
         connection conn = new connection();
         gettersANDsetters getandset = new gettersANDsetters();
         int usertype,userid;
 
-         public SignIn()
+         public Signin()
         {
             InitializeComponent();
+        }
+
+        internal connection connection
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +51,7 @@ namespace BugTrackerApp
 
         private void login_Click(object sender, EventArgs e)
         {
-            SignIn sn = new SignIn();
+            Signin sn = new Signin();
             
             String query = "SELECT * FROM users WHERE USERNAME = '" + uname.Text + "' AND PASSWORD = '" + pwd.Text + "'";
             
@@ -54,13 +66,13 @@ namespace BugTrackerApp
                     string id = row["id"].ToString();
                     string fname = row["fname"].ToString();
                     string usertypeId = row["usertypeid"].ToString();
-                    string image = row["image"].ToString();
+                   
                     userid = Convert.ToInt32(id);
                     usertype = Convert.ToInt32(usertypeId);
                     getandset.setusertypeID(usertype);
                     getandset.setId(userid);
                     getandset.setUname(fname);
-                    getandset.setFilename(image);
+                    
 
 
                 }

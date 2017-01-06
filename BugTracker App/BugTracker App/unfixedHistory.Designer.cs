@@ -134,29 +134,33 @@
             this.Column2,
             this.Column3,
             this.bugHistory});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 319);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 207);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1145, 322);
+            this.dataGridView1.Size = new System.Drawing.Size(763, 209);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // unfixBug
             // 
             this.unfixBug.AutoSize = true;
-            this.unfixBug.Location = new System.Drawing.Point(84, 148);
+            this.unfixBug.Location = new System.Drawing.Point(56, 96);
+            this.unfixBug.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unfixBug.Name = "unfixBug";
-            this.unfixBug.Size = new System.Drawing.Size(149, 20);
+            this.unfixBug.Size = new System.Drawing.Size(100, 13);
             this.unfixBug.TabIndex = 5;
             this.unfixBug.Text = "Unfixed Bug History";
             // 
             // unfixedHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1191, 728);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(794, 473);
             this.Controls.Add(this.unfixBug);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "unfixedHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "unfixedHistory";

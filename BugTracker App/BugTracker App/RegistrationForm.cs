@@ -23,7 +23,18 @@ namespace BugTrackerApp
            
             InitializeComponent();
         }
-       
+
+        internal connection connection
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
 
         private void fname_TextChanged(object sender, EventArgs e)
         {
@@ -107,7 +118,7 @@ namespace BugTrackerApp
                             conn.manipulate(query);
                             MessageBox.Show("Registration Sucessfull Please log in to continue!!");
                             this.Close();
-                            SignIn sn = new SignIn();
+                            Signin sn = new Signin();
                             sn.Show();
                         }
             }

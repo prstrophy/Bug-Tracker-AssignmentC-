@@ -46,7 +46,7 @@
             // search
             // 
             this.search.Location = new System.Drawing.Point(59, 83);
-            this.search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.search.Margin = new System.Windows.Forms.Padding(2);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(137, 25);
             this.search.TabIndex = 0;
@@ -57,7 +57,7 @@
             // userType
             // 
             this.userType.Location = new System.Drawing.Point(59, 134);
-            this.userType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userType.Margin = new System.Windows.Forms.Padding(2);
             this.userType.Name = "userType";
             this.userType.Size = new System.Drawing.Size(137, 25);
             this.userType.TabIndex = 1;
@@ -68,7 +68,7 @@
             // fixedBug
             // 
             this.fixedBug.Location = new System.Drawing.Point(61, 182);
-            this.fixedBug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fixedBug.Margin = new System.Windows.Forms.Padding(2);
             this.fixedBug.Name = "fixedBug";
             this.fixedBug.Size = new System.Drawing.Size(135, 25);
             this.fixedBug.TabIndex = 2;
@@ -79,7 +79,7 @@
             // unfixedBug
             // 
             this.unfixedBug.Location = new System.Drawing.Point(59, 228);
-            this.unfixedBug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.unfixedBug.Margin = new System.Windows.Forms.Padding(2);
             this.unfixedBug.Name = "unfixedBug";
             this.unfixedBug.Size = new System.Drawing.Size(137, 27);
             this.unfixedBug.TabIndex = 3;
@@ -90,7 +90,7 @@
             // newUser
             // 
             this.newUser.Location = new System.Drawing.Point(59, 278);
-            this.newUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newUser.Margin = new System.Windows.Forms.Padding(2);
             this.newUser.Name = "newUser";
             this.newUser.Size = new System.Drawing.Size(135, 19);
             this.newUser.TabIndex = 4;
@@ -101,18 +101,18 @@
             // close
             // 
             this.close.Location = new System.Drawing.Point(78, 372);
-            this.close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.close.Margin = new System.Windows.Forms.Padding(2);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(63, 24);
             this.close.TabIndex = 6;
-            this.close.Text = "Close";
+            this.close.Text = "Log Out";
             this.close.UseVisualStyleBackColor = true;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(59, 320);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 23);
             this.button1.TabIndex = 7;
@@ -153,6 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(252, 428);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -163,7 +164,7 @@
             this.Controls.Add(this.fixedBug);
             this.Controls.Add(this.userType);
             this.Controls.Add(this.search);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "adminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adminDashboard";

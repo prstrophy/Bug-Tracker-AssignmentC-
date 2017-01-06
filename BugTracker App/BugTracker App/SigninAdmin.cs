@@ -20,6 +20,18 @@ namespace BugTrackerApp
             InitializeComponent();
         }
 
+        internal connection connection
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         private void sAdminLogin_Load(object sender, EventArgs e)
         {
 

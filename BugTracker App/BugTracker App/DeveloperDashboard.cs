@@ -24,6 +24,18 @@ namespace BugTrackerApp
            
         }
 
+        internal connection connection
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -128,7 +140,9 @@ namespace BugTrackerApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            Application.Restart();
+
         }
 
         private void errorReporting_Click(object sender, EventArgs e)
