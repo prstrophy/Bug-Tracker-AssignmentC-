@@ -48,13 +48,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.sourcefile = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 101);
+            this.label2.Location = new System.Drawing.Point(226, 105);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
@@ -84,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(344, 108);
+            this.label3.Location = new System.Drawing.Point(466, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
@@ -94,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(105, 136);
+            this.label4.Location = new System.Drawing.Point(226, 136);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
@@ -104,7 +102,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(105, 182);
+            this.label5.Location = new System.Drawing.Point(155, 177);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
@@ -113,7 +111,7 @@
             // 
             // linenumber
             // 
-            this.linenumber.Location = new System.Drawing.Point(213, 101);
+            this.linenumber.Location = new System.Drawing.Point(330, 98);
             this.linenumber.Margin = new System.Windows.Forms.Padding(2);
             this.linenumber.Name = "linenumber";
             this.linenumber.Size = new System.Drawing.Size(68, 20);
@@ -122,7 +120,7 @@
             // 
             // methodname
             // 
-            this.methodname.Location = new System.Drawing.Point(469, 101);
+            this.methodname.Location = new System.Drawing.Point(582, 94);
             this.methodname.Margin = new System.Windows.Forms.Padding(2);
             this.methodname.Name = "methodname";
             this.methodname.Size = new System.Drawing.Size(68, 20);
@@ -131,7 +129,7 @@
             // 
             // classname
             // 
-            this.classname.Location = new System.Drawing.Point(213, 136);
+            this.classname.Location = new System.Drawing.Point(330, 133);
             this.classname.Margin = new System.Windows.Forms.Padding(2);
             this.classname.Name = "classname";
             this.classname.Size = new System.Drawing.Size(68, 20);
@@ -150,7 +148,7 @@
             // 
             // Save
             // 
-            this.Save.Location = new System.Drawing.Point(445, 218);
+            this.Save.Location = new System.Drawing.Point(531, 218);
             this.Save.Margin = new System.Windows.Forms.Padding(2);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(55, 22);
@@ -161,7 +159,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(549, 218);
+            this.button2.Location = new System.Drawing.Point(633, 218);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(55, 22);
@@ -172,7 +170,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(445, 172);
+            this.button1.Location = new System.Drawing.Point(527, 172);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(59, 23);
@@ -219,7 +217,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(344, 136);
+            this.label6.Location = new System.Drawing.Point(449, 143);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
@@ -228,7 +226,7 @@
             // 
             // sourcefile
             // 
-            this.sourcefile.Location = new System.Drawing.Point(469, 133);
+            this.sourcefile.Location = new System.Drawing.Point(582, 129);
             this.sourcefile.Margin = new System.Windows.Forms.Padding(2);
             this.sourcefile.Name = "sourcefile";
             this.sourcefile.Size = new System.Drawing.Size(68, 20);
@@ -238,21 +236,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(593, 172);
+            this.label7.Location = new System.Drawing.Point(46, 101);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 16;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(587, 75);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -288,10 +276,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(743, 478);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.sourcefile);
             this.Controls.Add(this.label6);
@@ -317,7 +305,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -346,7 +333,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox sourcefile;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox2;

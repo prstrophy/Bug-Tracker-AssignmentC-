@@ -42,7 +42,8 @@ namespace BugTrackerApp
                         DataTable dt = conn.retrieve(query);
                         comboBox1.Text = dt.Rows[0][0].ToString();
                         richTextBox1.Text = dt.Rows[0][1].ToString();
-                    }
+                    label6.Text = BugId.ToString();
+                }
                     
 
                 }
@@ -91,7 +92,7 @@ namespace BugTrackerApp
             displayBug();
 
             label5.Text = "Welcome," + getandset.getUname();
-            pictureBox1.Image = Image.FromFile(@"../../../images/"+getandset.getFilename());
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,7 +115,7 @@ namespace BugTrackerApp
                 conn.manipulate(query);
                 displayBug();
 
-                
+            
 
                 int testerId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["TesterId"].Value);
 
@@ -180,9 +181,36 @@ namespace BugTrackerApp
         {
 
         }
-      
 
-     
+        private void dataGridView1_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == this.dataGridView1.Columns["Status"].Index)
+                {
+                    string Re = e.Value.ToString();
+                    if (Re.Trim().Equals("Fixed"))
+                    {
+                        this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
+                        this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                        this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.Black;
+                    }
+                }
+            }
+            catch (Exception)
+            {
 
+            }
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

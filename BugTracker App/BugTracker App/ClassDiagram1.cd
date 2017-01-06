@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BugTrackerApp.bughistory" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAKAAEBAAAACAAgACAAwAAAAAEEAAAAAABAA=</HashCode>
+      <FileName>bughistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.bugs" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgAAEACAgAAAQAAKhAAQCAAy4gAAAAEQAAAAAAAA=</HashCode>
+      <FileName>bugs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.commonFunction" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>commonFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.connection">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAAAIQAAACQAAA=</HashCode>
+      <FileName>connection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.DeveloperDashboard" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wQCAsIQEAACgCBEQAgKkAAQCDAy4gAAAACQRAQBQAAA=</HashCode>
+      <FileName>DeveloperDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.fixedBugHistory" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAgAAGACAgABAAAAKgAAQCAAy4gAAAAAQBAAAAAAA=</HashCode>
+      <FileName>fixedBugHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.fixedHistoryDeveloper" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACBgAAEACAgAAAAAAKgAAQCAAy4gAAAAAQAAAAAAAA=</HashCode>
+      <FileName>fixedHistoryDeveloper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.gettersANDsetters" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAADCAAQCgABgAgAEIAAABEAAAAAgA=</HashCode>
+      <FileName>gettersANDsetters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.Program" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.registrationForm" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAQJhAIACAgBBAQCACgQAgGABQAgAAAAAQAAQBQIAA=</HashCode>
+      <FileName>registrationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.Search" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAEAAAAAKAAABAAAAiAAAgSAEwoBAIAEEAAAAAAAAA=</HashCode>
+      <FileName>Search.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.SignIn" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAAIhAAAiAAEBAAAEiAQAwKIAQAgAAAAAQAAYBAMAA=</HashCode>
+      <FileName>Signin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.SigninAdmin" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAAAAQAACAAABAAAACACAASAAQIAAAAEEAAASBAAAA=</HashCode>
+      <FileName>SigninAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.AdminDashboard">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAACAAAA=</HashCode>
+      <FileName>SigninAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.TesterDashboard" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gYAAAKAAACAAABEAgkCAAgACDAw4CAgAgGASAQBACIA=</HashCode>
+      <FileName>TesterDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.testerHistory" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAgAQEACAgABAAAAKgAAUCAAyYgAAAAAQAAAAAAAA=</HashCode>
+      <FileName>testerHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.unfixedHistory" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAgAAEACAgAAIAAAKgAAQCAAy4gAEAAAQBAAAAAAA=</HashCode>
+      <FileName>unfixedHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.Userdetails" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAAAAAAACCAEBAAAACECAgSAAQAAAAAEIAAAAAAAgA=</HashCode>
+      <FileName>Userdetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.userType" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAEBAAAACEAAASAAwgAAAAEIBAAQAEAlA=</HashCode>
+      <FileName>userType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAABEAAAAQCAAAAAAAAAAAAAAIQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugTrackerApp.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -65,6 +65,7 @@
     <Compile Include="bughistory.Designer.cs">
       <DependentUpon>bughistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="commonFunction.cs" />
     <Compile Include="connection.cs" />
     <Compile Include="TesterDashboard.cs">
       <SubType>Form</SubType>
@@ -196,6 +197,7 @@
     <EmbeddedResource Include="userType.resx">
       <DependentUpon>userType.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

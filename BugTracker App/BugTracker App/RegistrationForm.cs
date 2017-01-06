@@ -20,7 +20,7 @@ namespace BugTrackerApp
         private string destinationPath;
         public registrationForm()
         {
-            destinationPath = @"../../../images/";
+           
             InitializeComponent();
         }
        
@@ -99,7 +99,6 @@ namespace BugTrackerApp
                                      
                                      if (File.Exists(destinationPath))
                                          File.Delete(destinationPath);
-
                                      File.Copy(sourcePath, destinationPath);
                                  }
                             string query;
@@ -138,24 +137,7 @@ namespace BugTrackerApp
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog dlg = new OpenFileDialog())
-            {
-                dlg.Title = "Open Image";
-                dlg.Filter = "png files (*.png)|*.png|(*.jpg)|*.jpg";
-                
-                
-                if (dlg.ShowDialog() == DialogResult.OK)
-                {
-                    sourcePath = dlg.FileName;
-                    var fileName = Path.GetFileName(dlg.FileName);
-                    getandsets.setFilename(fileName);
-                    
-                    
-                }
-            }
-        }
+       
        
         
 

@@ -39,7 +39,7 @@ namespace BugTrackerApp
         private void dashboardForTester_Load(object sender, EventArgs e)
         {
             DisplayBug();
-            pictureBox1.Image = Image.FromFile(@"../../../images/"+ getandset.getFilename());
+            
             label7.Text = "Welcome,"+getandset.getUname();
         }
         public void DisplayBug()

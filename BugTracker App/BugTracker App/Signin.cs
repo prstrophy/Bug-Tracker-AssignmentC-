@@ -66,7 +66,7 @@ namespace BugTrackerApp
                 }
                 if (usertype == 1)
                 {
-
+                    
                     this.Hide();
                     MessageBox.Show("Login Sucessfull");
                     DeveloperDashboard dsd = new DeveloperDashboard();
@@ -119,6 +119,11 @@ namespace BugTrackerApp
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }
